@@ -20,7 +20,7 @@ div#messageArea {
 table {
     position: absolute;
     left: 173px;
-    top: 198px;
+    top: 98px;
     border-spacing: 0px;
 }
 
@@ -42,3 +42,12 @@ form input {
     border-color: rgb(83, 175, 19);
     font-size: 1em;
 }
+
+.hit{
+    background: url(images/ship.png) no-repeat center center;
+}
+
+.miss{
+    background: url(images/miss.png) no-repeat center center;
+}
+
