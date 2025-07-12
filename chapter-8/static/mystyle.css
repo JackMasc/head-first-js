@@ -17,6 +17,15 @@ div#messageArea {
     color: rgb(83, 175, 19);
 }
 
+#restartButton {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    background-color: rgb(152, 207, 113);
+    border-color: rgb(83, 175, 19);
+    font-size: 1em;
+}
+
 table {
     position: absolute;
     left: 173px;
@@ -50,4 +59,3 @@ form input {
 .miss{
     background: url(images/miss.png) no-repeat center center;
 }
-
