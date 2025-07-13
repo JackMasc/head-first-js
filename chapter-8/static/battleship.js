@@ -73,15 +73,20 @@ let model = {
             let ship = this.ships[i];
             let index = ship.locations.indexOf(guess);
                 if (index >= 0) {
-                result = "hit";
-                ship.hits[index] = "hit";
-                view.displayMessage(result.toUpperCase() + "!");
-                view.displayGuess(guess, result);
-                if (this.isSunk(ship)) {
-                    this.shipsSunk++;
-                    view.displayMessage("You sank a battleship!");
-                }
-                return true
+                    if (ship.hits[index] === "") {
+                        result = "hit";
+                        ship.hits[index] = "hit";
+                        view.displayMessage(result.toUpperCase() + "!");
+                        view.displayGuess(guess, result);
+                        if (this.isSunk(ship)) {
+                            this.shipsSunk++;
+                            view.displayMessage("You sank a battleship!");
+                        }
+                        return true
+                    } else {
+                        view.displayMessage("You did already play this guess before!")
+                        return false
+                    }
             }
         }
         view.displayMessage(result.toUpperCase() + "!");
